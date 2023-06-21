@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GameType } from "../types";
-import Game from "./Game";
+import GameCard from "./GameCard";
 
 export default function GameList() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -32,11 +32,11 @@ export default function GameList() {
 	}, []);
 
 	return (
-		<div>
+		<div className="grid grid-cols-3 gap-3">
 			{isLoading ? (
 				<p> LOADING </p>
 			) : (
-				games && games.map((game) => <Game {...game} />)
+				games && games.map((game) => <GameCard {...game} />)
 			)}
 		</div>
 	);
