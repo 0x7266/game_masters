@@ -1,0 +1,18 @@
+export const genres: string[] = [
+	"all",
+	"action rpg",
+	"arpg",
+	"battle royale",
+	"card game",
+	"fantasy",
+	"fighting",
+	"mmo",
+	"mmoarpg",
+	"mmorpg",
+	"moba",
+	"racing",
+	"social",
+	"shooter",
+	"sports",
+	"strategy",
+];

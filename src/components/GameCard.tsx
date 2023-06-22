@@ -2,14 +2,14 @@ import { GameType } from "../types";
 
 export default function GameCard(props: GameType) {
 	return (
-		<div className="bg-am-blue-lighter max-w-sm rounded overflow-hidden shadow-lg flex flex-col justify-between">
+		<div className="bg-am-blue-lighter max-w-sm rounded-xl overflow-hidden shadow-lg flex flex-col justify-between">
 			<img
 				className="w-full"
 				src={props.thumbnail}
 				alt="Sunset in the mountains"
 			/>
 			<div className="px-6 py-4">
-				<div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+				<div className="font-bold text-xl mb-2">{props.title}</div>
 				<p className="text-gray-700 text-base">{props.short_description}</p>
 			</div>
 			<div className="px-6 pt-4 pb-2">
