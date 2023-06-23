@@ -15,7 +15,7 @@ export default function GameCard(props: Game) {
 				src={props.thumbnail}
 				alt="Sunset in the mountains"
 			/>
-			<div className="absolute top-72 group-hover:top-0 transition-all duration-300 bg-white flex flex-col h-full">
+			<div className="absolute top-72 group-hover:top-0 transition-all duration-300 bg-white flex flex-col h-full w-full">
 				<div className="self-end relative p-2">
 					<span className="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700">
 						{props.genre}
