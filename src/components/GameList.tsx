@@ -32,17 +32,11 @@ export default function GameList() {
 
 	if (filteredGames.status >= 500 && filteredGames.status <= 509) {
 		return (
-			<Error
-				message="O servidor falhou em responder, tente recarregar a página."
-				status_code={filteredGames.status}
-			/>
+			<Error message="O servidor falhou em responder, tente recarregar a página." />
 		);
 	}
 
 	return (
-		<Error
-			message="O servidor não conseguirá responder por agora, tente voltar novamente mais tarde"
-			status_code={filteredGames.status}
-		/>
+		<Error message="O servidor não conseguirá responder por agora, tente voltar novamente mais tarde" />
 	);
 }

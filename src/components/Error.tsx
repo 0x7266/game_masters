@@ -1,10 +1,4 @@
-export default function Error({
-	message,
-	status_code,
-}: {
-	message: string;
-	status_code: number;
-}) {
+export default function Error({ message }: { message: string }) {
 	return (
 		<div className="absolute left-0 top-0 min-h-[100dvh] w-[100dvw] bg-blue-800 p-20 flex flex-col gap-16">
 			<div className="text-8xl font-serif">( ._.)</div>
