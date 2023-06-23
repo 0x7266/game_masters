@@ -7,6 +7,9 @@ export default {
 				"am-blue-darker": "rgb(29, 66, 207)",
 				"am-blue-lighter": "rgb(56, 136, 252)",
 			},
+			fontFamily: {
+				"press-start": ['"Press Start 2P"', "cursive"],
+			},
 		},
 	},
 	plugins: [],

@@ -7,12 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function GameList() {
 	const { filteredGames, isLoading } = useContext(GamesContext);
 	if (filteredGames.status >= 500 && filteredGames.status <= 509) {
-		return <div>ERROR</div>;
+		return (
+			<div>O servidor falhou em responder, tente recarregar a página.</div>
+		);
 	}
 	if (filteredGames.status >= 500) {
 		return <div>ERROR</div>;
 	}
-	console.log(filteredGames);
 	return (
 		<motion.div
 			animate={{ opacity: 1 }}

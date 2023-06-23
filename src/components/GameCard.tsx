@@ -8,21 +8,25 @@ export default function GameCard(props: Game) {
 			animate={{ opacity: 1 }}
 			initial={{ opacity: 0 }}
 			exit={{ opacity: 0 }}
-			className="bg-am-blue-lighter max-w-sm rounded-xl overflow-hidden shadow-lg flex flex-col justify-between"
+			className="relative bg-am-blue-lighter max-w-sm overflow-hidden shadow-lg flex flex-col justify-between group"
 		>
 			<img
-				className="w-full"
+				className="w-full object-cover h-64"
 				src={props.thumbnail}
 				alt="Sunset in the mountains"
 			/>
-			<div className="px-6 py-4">
-				<div className="font-bold text-xl mb-2">{props.title}</div>
-				<p className="text-gray-700 text-base">{props.short_description}</p>
-			</div>
-			<div className="px-6 pt-4 pb-2">
-				<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-					{props.genre}
-				</span>
+			<div className="absolute -bottom-72 group-hover:bottom-0 transition-all duration-300 bg-white flex flex-col h-64">
+				<div className="self-end relative p-2">
+					<span className="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700">
+						{props.genre}
+					</span>
+				</div>
+				<div className="grow px-4 flex flex-col gap-2">
+					<div className="font-bold text-xl text-black font-semibold">
+						{props.title}
+					</div>
+					<p className="text-gray-700 text-base">{props.short_description}</p>
+				</div>
 			</div>
 		</motion.div>
 	);
