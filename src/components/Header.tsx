@@ -20,7 +20,7 @@ export default function Header() {
 			<div className="w-2/3 flex flex-wrap justify-center gap-2">
 				{genres.map((genre) => (
 					<button
-						className={`rounded border px-3 py-1 hover:scale-105 ${
+						className={`rounded border px-3 py-1 hover:scale-105 relative active:top-[2px] transition-all ${
 							query.toLowerCase() === genre.toLowerCase()
 								? "border-am-blue-lighter text-am-blue-lighter bg-am-blue-darker"
 								: ""

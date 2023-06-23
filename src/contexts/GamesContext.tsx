@@ -34,7 +34,8 @@ export function GamesContextProvider({ children }: ContextChildrenProps) {
 				"https://games-test-api-81e9fb0d564a.herokuapp.com/api/data/",
 				{
 					headers: {
-						"dev-email-address": import.meta.env.VITE_REACT_EMAIL || "",
+						"dev-email-address":
+							import.meta.env.VITE_REACT_EMAIL || "test_email@appmaster.io",
 					},
 				}
 			);
