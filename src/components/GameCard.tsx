@@ -1,8 +1,15 @@
-import { GameType } from "../types";
+import { Game } from "../types";
+import { motion } from "framer-motion";
 
-export default function GameCard(props: GameType) {
+export default function GameCard(props: Game) {
 	return (
-		<div className="bg-am-blue-lighter max-w-sm rounded-xl overflow-hidden shadow-lg flex flex-col justify-between">
+		<motion.div
+			layout
+			animate={{ opacity: 1 }}
+			initial={{ opacity: 0 }}
+			exit={{ opacity: 0 }}
+			className="bg-am-blue-lighter max-w-sm rounded-xl overflow-hidden shadow-lg flex flex-col justify-between"
+		>
 			<img
 				className="w-full"
 				src={props.thumbnail}
@@ -17,6 +24,6 @@ export default function GameCard(props: GameType) {
 					{props.genre}
 				</span>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

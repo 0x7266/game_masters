@@ -16,7 +16,7 @@ export const GamesContext = createContext<GamesContextType>({
 		("");
 	},
 	filteredGames: { games: [], status: 100 },
-	query: "",
+	query: "All",
 });
 
 export function GamesContextProvider({ children }: ContextChildrenProps) {
@@ -25,7 +25,7 @@ export function GamesContextProvider({ children }: ContextChildrenProps) {
 		status: 100,
 	});
 	const [isLoading, setIsLoading] = useState<boolean>(true);
-	const [query, setQuery] = useState<string>("");
+	const [query, setQuery] = useState<string>("All");
 
 	async function getGames() {
 		setIsLoading(true);
@@ -52,7 +52,7 @@ export function GamesContextProvider({ children }: ContextChildrenProps) {
 	}, []);
 
 	const filteredGames: Response = useMemo(() => {
-		if (query === "all") {
+		if (query.toLocaleLowerCase() === "all") {
 			return response;
 		}
 		if (genres.includes(query)) {

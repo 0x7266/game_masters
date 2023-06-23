@@ -1,8 +1,8 @@
 import { GamesContext } from "../contexts/GamesContext";
 import { useContext } from "react";
-import { useFilter } from "../hooks/useFilter";
 import GameCard from "./GameCard";
 import Loader from "./Loader";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function GameList() {
 	const { filteredGames, isLoading } = useContext(GamesContext);
@@ -14,16 +14,22 @@ export default function GameList() {
 	}
 	console.log(filteredGames);
 	return (
-		<>
+		<motion.div
+			animate={{ opacity: 1 }}
+			initial={{ opacity: 0 }}
+			exit={{ opacity: 0 }}
+		>
 			{isLoading ? (
 				<Loader />
 			) : (
-				<div className="grid grid-cols-3 gap-3">
-					{filteredGames.games.map((game) => (
-						<GameCard {...game} key={game.id} />
-					))}
-				</div>
+				<motion.div layout className="grid md:grid-cols-3 gap-3">
+					<AnimatePresence>
+						{filteredGames.games.map((game) => (
+							<GameCard {...game} key={game.id} />
+						))}
+					</AnimatePresence>
+				</motion.div>
 			)}
-		</>
+		</motion.div>
 	);
 }
