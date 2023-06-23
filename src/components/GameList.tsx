@@ -18,7 +18,7 @@ export default function GameList() {
 				{isLoading ? (
 					<Loader />
 				) : (
-					<motion.div layout className="grid md:grid-cols-3 gap-3">
+					<motion.div layout className="grid md:grid-cols-3 gap-3 p-2">
 						<AnimatePresence>
 							{filteredGames.games.map((game) => (
 								<GameCard {...game} key={game.id} />

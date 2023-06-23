@@ -9,6 +9,7 @@ export default {
 			},
 			fontFamily: {
 				"press-start": ['"Press Start 2P"', "cursive"],
+				rubik: ["Rubik", "sans-serif"],
 			},
 		},
 	},
