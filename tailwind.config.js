@@ -8,7 +8,7 @@ export default {
 				"am-blue-lighter": "rgb(56, 136, 252)",
 			},
 			fontFamily: {
-				"press-start": ['"Press Start 2P"', "cursive"],
+				gasoek: [" Gasoek One", "sans-serif"],
 				rubik: ["Rubik", "sans-serif"],
 			},
 		},

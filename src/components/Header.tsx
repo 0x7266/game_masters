@@ -7,12 +7,12 @@ export default function Header() {
 
 	return (
 		<div className="w-full md:max-w-3xl flex flex-col justify-center items-center gap-10 relative">
-			<div className="logo flex flex-row-reverse md:flex-row justify-center md:gap-5 items-center">
-				<div className="text-7xl relative -top-7 -left-10 md:block sm:top-0 sm:left-0">
+			<div className="logo flex flex-row-reverse md:flex-row justify-center md:gap-3 items-center">
+				<div className="text-6xl relative -top-7 -left-10 md:block sm:top-0 sm:left-0 font-sans">
 					🕹
 				</div>
-				<h1 className="text-6xl md:text-7xl font-rubik font-bold relative left-12 top-2  md:left-0 md:top-0">
-					Game Masters
+				<h1 className="text-6xl md:text-7xl font-gasoek relative left-12 top-2  md:left-0 md:top-0">
+					GAME MASTERS
 				</h1>
 			</div>
 			<input
